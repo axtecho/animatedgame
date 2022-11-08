@@ -1,0 +1,498 @@
+main {
+    display: grid;
+    grid-template-areas: "game info";
+
+}
+body {
+    margin:0;
+    padding:0;
+}
+#game_ui {
+    position: absolute;
+    width: 100vw;
+    height: 5vw;
+     bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    left: 0;
+    
+} 
+
+/* #score_board,
+#health,
+#time { 
+     width: 20vw;
+    padding-left: 1vw;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+     display: flex; 
+     align-items: center; 
+   
+
+} */
+
+#game {
+    
+    display: grid;
+    
+   
+  width: 100vw;
+        height: 50.7vw; 
+}
+
+#game-background {
+    position: absolute;
+    background-image: url(Images/Background.svg);
+    height: 56.7vw;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+
+
+}
+
+
+#screen {
+
+    position: relative;
+    margin-left: -9px;
+    grid-area: screen;
+    width: 100vw;
+    height: 56.7vw;    
+    /* overflow: hidden;  */
+    
+
+}
+
+
+#t_container {
+    position: absolute;
+}
+
+#t_sprite {
+    width: 8vw;
+    height: 7.74vw;
+    background-image: url(Images/Toaster.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#h_container {
+    position: absolute;
+
+}
+
+#h_sprite {
+    width: 8vw;
+    height: 7.74vw;
+    background-image: url(Images/Hairdryer.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* Good elements */
+
+#d_container {
+    position: absolute;
+    border: 1px yellow;
+}
+
+#d_sprite {
+    width: 8vw;
+    height: 7.74vw;
+    background-image: url(Images/duck.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#sb_container {
+    position: absolute;
+}
+
+#sb_sprite {
+    width: 8vw;
+    height: 7.74vw;
+    background-image: url(Images/Soap.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/*  #sh_container{
+    position:absolute;
+} 
+
+ #sh_sprite {
+    width: 8vw;
+    height: 7.74vw;
+    background-image: url(Images/Shampo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+} */ 
+
+/* Different positions */
+.position1 {
+    top: -8vw;
+    left: 7vw;
+}
+
+.position2 {
+    top: -8vw;
+    left: 10vw;
+}
+
+.position3 {
+    top: -8vw;
+    left: 12vw;
+}
+
+.position4 {
+    top: -8vw;
+    left: 17vw;
+}
+
+.position5 {
+    top: -8vw;
+    left: 22vw;
+}
+
+.position6 {
+    top: -8vw;
+    left: 27vw;
+}
+
+/* Different movements */
+
+@keyframes movement1 {
+    to {
+        transform: translateY(49vw);
+    }
+}
+
+@keyframes movement2 {
+    to {
+        transform: translateY(49vw);
+    }
+}
+
+@keyframes movement3 {
+    to {
+        transform: translateY(49vw);
+    }
+}
+
+@keyframes movement4 {
+    to {
+        transform: translateY(49vw);
+    }
+}
+/* @keyframes movement5{
+    0% {
+        transform: translate(-8vw, 47vw);
+    }
+    25%{
+        transform: translate(27vw, 37vw);
+    }
+    50% {
+        transform: translate(36vw, 30vw);
+    }
+    100%{
+        transform: translate(27vw, 49vw);
+    }
+} */
+
+.movement1 {
+    animation: movement1 5s .5s linear infinite;
+}
+
+.movement2 {
+    animation: movement2 2s 1.5s linear infinite;
+}
+
+.movement3 {
+    animation: movement3 2.5s 1s linear infinite;
+}
+
+.movement4 {
+    animation: movement4 3s 2s linear infinite;
+}
+/* .movement5 {
+    animation: movement5 3s .5s linear reverse;
+} */
+
+.pause {
+    animation-play-state: paused;
+}
+
+
+.rotateR {
+    animation-name: rotateR;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes rotateR {
+    to {
+        transform: rotate(720deg)
+    }
+}
+
+
+.rotateL {
+    animation-name: rotateL;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+@keyframes rotateL {
+    to {
+        transform: rotate(720deg)
+    }
+}
+
+#health {
+    position: absolute;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    height: 15vw;
+    width: 15vw;
+    top: -30vw;
+    left: 68vw;
+    
+}
+
+.hbg1 {background-image: url(Images/1heart.svg);}
+.hbg2 {background-image: url(Images/2hearts.svg);}
+.hbg3 {background-image: url(Images/3hearts.svg);}
+
+#mute{
+    position: absolute;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    top: -54vw;
+    left: 90vw;
+    height: 10vw;
+    width: 35vw;
+    cursor: pointer;
+}
+.m_on{background-image: url(Images/Music_on.svg);}
+.m_off{background-image: url(Images/Music_off.svg);}
+
+#time{
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: -33vw;
+    left: 80vw;
+    height: 10vw;
+    width: 20vw; 
+}
+
+.tbg0{background-image: url(Images/00_00.svg);}
+.tbg1{background-image: url(Images/00_01.svg);}
+.tbg2{background-image: url(Images/00_02.svg);}
+.tbg3{background-image: url(Images/00_03.svg);}
+.tbg4{background-image: url(Images/00_04.svg);}
+.tbg5{background-image: url(Images/00_05.svg);}
+.tbg6{background-image: url(Images/00_06.svg);}
+.tbg7{background-image: url(Images/00_07.svg);}
+.tbg8{background-image: url(Images/00_08.svg);}
+.tbg9{background-image: url(Images/00_09.svg);}
+.tbg10{background-image: url(Images/00_10.svg);}
+.tbg11{background-image: url(Images/00_11.svg);}
+.tbg12{background-image: url(Images/00_12.svg);}
+.tbg13{background-image: url(Images/00_13.svg);}
+.tbg14{background-image: url(Images/00_14.svg);}
+.tbg15{background-image: url(Images/00_15.svg);}
+.tbg16{background-image: url(Images/00_16.svg);}
+.tbg17{background-image: url(Images/00_17.svg);}
+.tbg18{background-image: url(Images/00_18.svg);}
+.tbg19{background-image: url(Images/00_19.svg);}
+.tbg20{background-image: url(Images/00_20.svg);}
+.tbg21{background-image: url(Images/00_21.svg);}
+.tbg22{background-image: url(Images/00_22.svg);}
+.tbg23{background-image: url(Images/00_23.svg);}
+.tbg24{background-image: url(Images/00_24.svg);}
+.tbg25{background-image: url(Images/00_25.svg);}
+.tbg26{background-image: url(Images/00_26.svg);}
+.tbg27{background-image: url(Images/00_27.svg);}
+.tbg28{background-image: url(Images/00_28.svg);}
+.tbg29{background-image: url(Images/00_29.svg);}
+.tbg30{background-image: url(Images/00_30.svg);}
+
+
+#score_board {
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: -25vw;
+    left: 65vw;
+    height: 10vw;
+    width: 35vw;
+}
+
+.dbg0 {background-image: url(Images/delight0.svg);}
+.dbg10 {background-image: url(Images/delight10.svg);}
+.dbg20 {background-image: url(Images/delight20.svg);}
+.dbg30 {background-image: url(Images/delight30.svg);}
+.dbg40 {background-image: url(Images/delight40.svg);}
+.dbg50 {background-image: url(Images/delight50.svg);}
+.dbg60 {background-image: url(Images/delight60.svg);}
+.dbg70 {background-image: url(Images/delight70.svg);}
+.dbg80 {background-image: url(Images/delight80.svg);}
+.dbg90 {background-image: url(Images/delight90.svg);}
+.dbg100 {background-image: url(Images/delight100.svg);}
+
+.hidden {
+    visibility: hidden;
+}
+
+#title_screen {
+    position: absolute;
+    background-image: url(Images/welcome.svg);
+    height: 56.7vw;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+#title_screen>h1 {
+    position: absolute;
+    top: 10vw;
+    left: 20vw;
+    font-size: 27px;
+    font-family: Active, 'Times New Roman', Times, serif;
+}
+
+#buttons>p {
+
+    /* top: 20vw;
+    left: 20vw; */
+    font-size: 27px;
+    font-family: Active, 'Times New Roman', Times, serif;
+    cursor: pointer;
+
+}
+
+#buttons {
+    position: absolute;
+    top: 28vw;
+    left: 20vw;
+}
+
+#instructions {
+    position: absolute;
+    background-image: url(Images/instructions.svg);
+    height: 56.7vw;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+#instructions>h1 {
+    position: absolute;
+    top: 5vw;
+    left: 41vw;
+    font-size: 45px;
+    font-family: Active, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+#instructions>h2 {
+    position: absolute;
+    color: white;
+    font-family: Active, 'Times New Roman', Times, serif;
+    top: 12vw;
+    left: 9vw;
+    font-size: 20px;
+    line-height: 1.6;
+
+}
+
+.click {
+    color: blue;
+}
+
+#instructions>p {
+    position: absolute;
+    top: 22vw;
+    left: 75vw;
+    color: white;
+    font-family: Active, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#game_over {
+    position: absolute;
+    background-image: url(Images/game_over.svg);
+    height: 56.7vw;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#game_over>h2 {
+    position: absolute;
+    color: white;
+    font-family: Active, 'Times New Roman', Times, serif;
+    top: 20vw;
+    left: 4vw;
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+#game_over>p {
+    position: absolute;
+    top: 20vw;
+    left: 66vw;
+    color: white;
+    font-family: Active, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#level_complete {
+    position: absolute;
+    background-image: url(Images/level_complete.svg);
+    height: 56.7vw;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#level_complete>h1 {
+    position: absolute;
+    top: 5vw;
+    left: 39vw;
+    font-size: 45px;
+    font-family: Active, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+#level_complete>h2 {
+    position: absolute;
+    color: white;
+    font-family: Active, 'Times New Roman', Times, serif;
+    top: 20vw;
+    left: 7vw;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+#level_complete>p {
+    position: absolute;
+    top: 20vw;
+    left: 66vw;
+    color: white;
+    font-family: Active, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    cursor: pointer;
+}
+

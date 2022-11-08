@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="screen">
+        <div id="game" class="hidden">
+          <div id="game-background"></div>
+          <div id="game_sprites">
+            <div id="h_container">
+              <div id="h_sprite"></div>
+            </div>
+
+            <div id="t_container">
+              <div id="t_sprite"></div>
+            </div>
+
+            <div id="d_container">
+              <div id="d_sprite"></div>
+            </div>
+
+            <div id="sb_container">
+              <div id="sb_sprite"></div>
+            </div>
+
+            <div id="sh_container">
+              <div id="sh_sprite"></div>
+            </div>
+          </div>
+
+          <div id="game_ui">
+            <div id="mute"><span id="mute_button"></span></div>
+            <div id="score_board"><span id="delight"></span></div>
+            <div id="health"><span id="current_lives"></span></div>
+            <div id="time"><span id="current_time"></span></div>
+          </div>
+
+          <div id="title_screen" class="hidden">
+            <h1>
+              Oh welcome to <br />
+              ”So fresh so clean, granny edition”
+            </h1>
+            <div id="buttons">
+              <p id="play_game">PLAY</p>
+              <p id="see_instructions">INSTRUCTIONS</p>
+            </div>
+          </div>
+          <div id="instructions" class="hidden">
+            <h1>Instructions</h1>
+            <h2>
+              Oh hello there!<br /><br />
+              Thank you helping me take a shower.<br />Now don’t worry this is
+              not ”hands on” washing.<br />
+              The thing is that I have this old rickety shelf <br />above my
+              bathtub where I store all my shower items<br />
+              as well as my toasters and hairdryers.<br />
+              So if you be so kind as to
+              <span style="color: blue">CLICK</span> on the <br /><span
+                style="color: green"
+              >
+                hairdryers & toasters</span
+              >
+              so they disstappear that<br />
+              would help me. But be careful not to
+              <span style="color: blue">CLICK</span>
+              <span style="color: red">shampoo bottles,</span><br />
+              <span style="color: red">blocks of soap or my ducks!</span> I need
+              those in the shower.<br />
+              If you could help me with that then I would be so delighted.
+            </h2>
+            <p>Play</p>
+          </div>
+          <div id="game_over" class="hidden">
+            <h2>
+              Damn you!<br />Youngsters nowadays are so useless.<br />
+              Look at what you did to me!<br />As punishment I will now haunt
+              you forever!
+            </h2>
+            <p>Return to menu to try again</p>
+          </div>
+          <div id="level_complete" class="hidden">
+            <h1>Level complete!</h1>
+            <h2>
+              Now I feel all clean and fresh. Not electrocuted at all. <br />
+              Thank you so much kind stranger!
+            </h2>
+            <p>Return to menu to try again</p>
+          </div>
+          <audio id="backgroundmusic" src="Sound/Background_loop.mp3"></audio>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
